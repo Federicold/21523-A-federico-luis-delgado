@@ -8,6 +8,7 @@ const mostrarPublicaciones = (publicaciones, elementoHtml) => {
                 <div class="d-flex flex-column justify-content-between">
                     <h4>${pub.titulo}</h4>
                     <p>${pub.detalle}</p>
+                    <p>${pub.autor}</p>
                     <p>${pub.fecha}</p>
                 </div>
             </section>

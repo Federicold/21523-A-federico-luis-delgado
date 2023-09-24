@@ -1,9 +1,9 @@
 const router = require('express').Router();
 const {
-    actualizarPublicacion,
-    crearPublicacion,
-    eliminarPublicacion,
-    obtenerPublicacion,
+    updatePost,
+    newPost,
+    deletePost,
+    getPosts,
     obtenerPublicaciones,
 } = require('../controllers/blog.controllers');
 
@@ -26,16 +26,16 @@ router.get('/admin', (req, res) => {
 router.get('/publicaciones/', obtenerPublicaciones);
 
 // Ruta para obtener una publicación
-router.get('/publicacion/:id', obtenerPublicacion);
+router.get('/publicacion/:id', getPosts);
 
 // Ruta para crear nueva publicación
-router.post('/publicacion/', crearPublicacion);
+router.post('/publicacion/', newPost);
 
 // Ruta para actualizar publicación
-router.put('/publicacion/:id', actualizarPublicacion);
+router.put('/publicacion/:id', updatePost);
 
 // Ruta para eliminar publicación
-router.delete('/publicacion/:id', eliminarPublicacion);
+router.delete('/publicacion/:id', deletePost);
 
 
 
